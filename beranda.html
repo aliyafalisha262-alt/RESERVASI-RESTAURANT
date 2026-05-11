@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saveur — Beranda</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&fit=crop')" rel="stylesheet">
+    <link rel="stylesheet" href="css/beranda.css">
+</head>
+<body>
+
+    <!-- FIXED BACKGROUND (Konsisten dengan halaman paket) -->
+    <div class="bg-fixed">
+        <div class="bg-image"></div>
+        <div class="bg-overlay"></div>
+    </div>
+
+    <div class="page-container">
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <a href="beranda.html" class="nav-logo">Saveur</a>
+
+            <ul class="nav-links">
+                <li><a href="beranda.html" class="active">Home</a></li>
+                <li><a href="paket, detail paket, reservsasi.html">Packages</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+            </ul>
+
+            <a href="paket, detail paket, reservsasi.html" class="nav-cta">Reserve Now</a>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-eyebrow">ESTABLISHED 2026</span>
+                <h1 class="hero-title">Begin Your Journey Into The Art <em>Fine Dining</em></h1>
+                <p class="hero-sub">Selamat datang di Saveur. Nikmati simfoni rasa yang dikurasi dengan presisi artistik dan bahan-bahan terbaik.</p>
+
+                <!-- SEARCH FEATURE -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="mainSearch" placeholder="Cari paket, menu, atau layanan..." onkeyup="handleSearch()">
+                        <button class="search-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </div>
+                    <div id="searchSuggestions" class="search-results"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <span class="footer-logo">Saveur</span>
+            <p class="footer-copy">© 2026 Saveur Fine Dining. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/beranda.js"></script>
+</body>
+</html>

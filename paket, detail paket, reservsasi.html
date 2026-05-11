@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saveur — Dining Packages</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/> -->
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/paket, detail paket, reservasi.css"/>
+</head>
+<body>
+
+  <!-- ══ FIXED BACKGROUND ══════════════════════════ -->
+  <div class="bg-fixed">
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+  </div>
+
+  <!-- ══ FLOATING PARTICLES ════════════════════════ -->
+  <div class="particle" style="left:10%; animation-duration:18s; animation-delay:0s;"></div>
+  <div class="particle" style="left:25%; animation-duration:22s; animation-delay:3s;"></div>
+  <div class="particle" style="left:55%; animation-duration:17s; animation-delay:7s;"></div>
+  <div class="particle" style="left:75%; animation-duration:25s; animation-delay:1s;"></div>
+  <div class="particle" style="left:90%; animation-duration:19s; animation-delay:5s;"></div>
+
+  <!-- ══ PAGE WRAPPER ══════════════════════════════ -->
+  <div class="page">
+
+    <!-- ── NAVIGATION ─────────────────────────────── -->
+    <nav>
+      <a href="beranda.html" class="nav-logo">Saveur</a>
+
+      <ul class="nav-links">
+        <li><a href="beranda.html">Home</a></li>
+        <li><a href="paket, detail paket, reservsasi.html" class="active">Packages</a></li>
+        <li><a href="tracking.html">Tracking</a></li>
+      </ul>
+
+      <a href="paket, detail paket, reservsasi.html" class="nav-cta">Reserve Now</a>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────────────── -->
+    <section class="hero">
+      <span class="hero-eyebrow">Curated Dining Experiences</span>
+      <div class="hero-divider"></div>
+      <h1 class="hero-title">Our <em>Signature</em><br>Packages</h1>
+      <p class="hero-sub">
+        BEGIN YOUR JOURNEY INTO THE ART OF FINE DINING
+      </p>
+    </section>
+
+    <!-- ── FILTER BAR ─────────────────────────────── -->
+    <div class="filter-bar">
+      <button class="filter-btn active"  onclick="filterCards('all', this)">All Packages</button>
+      <button class="filter-btn"         onclick="filterCards('dining', this)">Fine Dining</button>
+      <button class="filter-btn"         onclick="filterCards('celebration', this)">Celebration</button>
+      <button class="filter-btn"         onclick="filterCards('private', this)">Private Events</button>
+      <button class="filter-btn"         onclick="filterCards('tasting', this)">Tasting Menu</button>
+    </div>
+
+    <!-- ── PACKAGES GRID ──────────────────────────── -->
+    <section class="packages-section">
+      <div class="packages-grid" id="packagesGrid">
+
+        <!-- Card 1: Classic Elegance -->
+        <div class="pkg-card" data-cat="dining">
+          <div class="pkg-image-wrap">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80&fit=crop" alt="Classic Dining"/>
+            <div class="pkg-image-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <span class="pkg-category">Fine Dining</span>
+            <h2 class="pkg-name">Classic <em>Elegance</em></h2>
+            <p class="pkg-desc">
+              A refined two-hour dining experience featuring our seasonal
+              à la carte selection, paired with a curated wine flight.
+            </p>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-includes">
+              <li>3-Course Chef's Selection Menu</li>
+              <li>Wine Pairing (2 glasses)</li>
+              <li>Amuse-bouche &amp; Petit Fours</li>
+              <li>Priority Seating Reservation</li>
+            </ul>
+            <div class="pkg-pricing">
+              <div class="pkg-price-wrap">
+                <span class="pkg-price-label">Starting from</span>
+                <div class="pkg-price"><sup>Rp</sup>285<span class="pkg-price-per">/ person</span></div>
+              </div>
+              <div class="pkg-guests">
+                <span>2 – 8</span>
+                Guests
+              </div>
+            </div>
+            <button class="pkg-btn" onclick="openModal('Classic Elegance','Rp 285','dining')">
+              <span>Reserve This Package</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: FEATURED — Grand Tasting -->
+        <div class="pkg-card featured" data-cat="tasting">
+          <span class="pkg-badge">Most Popular</span>
+          <div class="pkg-image-wrap">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&fit=crop" alt="Grand Tasting"/>
+            <div class="pkg-image-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <span class="pkg-category">Tasting Menu</span>
+            <h2 class="pkg-name">Grand <em>Tasting</em></h2>
+            <p class="pkg-desc">
+              Our flagship experience — seven courses of culinary artistry,
+              each telling a story through texture, flavour, and heritage.
+            </p>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-includes">
+              <li>7-Course Chef's Tasting Menu</li>
+              <li>Full Sommelier Wine Pairing</li>
+              <li>Kitchen Tour &amp; Chef Introduction</li>
+              <li>Signed Menu Keepsake</li>
+              <li>Complimentary Champagne Welcome</li>
+            </ul>
+            <div class="pkg-pricing">
+              <div class="pkg-price-wrap">
+                <span class="pkg-price-label">Starting from</span>
+                <div class="pkg-price"><sup>Rp</sup>650<span class="pkg-price-per">/ person</span></div>
+              </div>
+              <div class="pkg-guests">
+                <span>2 – 6</span>
+                Guests
+              </div>
+            </div>
+            <button class="pkg-btn" onclick="openModal('Grand Tasting','Rp 650','tasting')">
+              <span>Reserve This Package</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Sunset Romance -->
+        <div class="pkg-card" data-cat="celebration">
+          <div class="pkg-image-wrap">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80&fit=crop" alt="Sunset Romance"/>
+            <div class="pkg-image-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <span class="pkg-category">Celebration</span>
+            <h2 class="pkg-name">Sunset <em>Romance</em></h2>
+            <p class="pkg-desc">
+              An intimate table for two, adorned with fresh florals,
+              candle arrangement, and a handwritten personalised menu.
+            </p>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-includes">
+              <li>Private Table with Floral Décor</li>
+              <li>4-Course Romantic Menu</li>
+              <li>Champagne &amp; Dessert Surprise</li>
+              <li>Personalised Menu Card</li>
+            </ul>
+            <div class="pkg-pricing">
+              <div class="pkg-price-wrap">
+                <span class="pkg-price-label">Starting from</span>
+                <div class="pkg-price"><sup>Rp</sup>490<span class="pkg-price-per">/ couple</span></div>
+              </div>
+              <div class="pkg-guests">
+                <span>2</span>
+                Guests
+              </div>
+            </div>
+            <button class="pkg-btn" onclick="openModal('Sunset Romance','Rp 490','celebration')">
+              <span>Reserve This Package</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: WIDE — The Private Salon -->
+        <div class="pkg-card wide" data-cat="private">
+          <span class="pkg-badge">Exclusive</span>
+          <div class="pkg-image-wrap">
+            <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=1200&q=80&fit=crop" alt="Private Salon"/>
+            <div class="pkg-image-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <span class="pkg-category">Private Events</span>
+            <h2 class="pkg-name">The Private <em>Salon</em></h2>
+            <p class="pkg-desc">
+              Saveur's exclusive dining room, reserved entirely for you.
+              Perfect for corporate dinners, milestone celebrations, and
+              intimate gatherings that demand absolute perfection and privacy.
+            </p>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-includes" style="display:grid;grid-template-columns:1fr 1fr;gap:9px 24px;">
+              <li>Full Venue Exclusivity (4 hours)</li>
+              <li>Bespoke Menu Consultation</li>
+              <li>Dedicated Butler Service</li>
+              <li>Custom Floral &amp; Table Styling</li>
+              <li>Curated Live Music (Optional)</li>
+              <li>Private Sommelier for the Evening</li>
+            </ul>
+            <div class="pkg-pricing">
+              <div class="pkg-price-wrap">
+                <span class="pkg-price-label">Starting from</span>
+                <div class="pkg-price"><sup>Rp</sup>8.500<span class="pkg-price-per">/ event</span></div>
+              </div>
+              <div class="pkg-guests">
+                <span>10 – 40</span>
+                Guests
+              </div>
+            </div>
+            <button class="pkg-btn" onclick="openModal('The Private Salon','Rp 8.500','private')">
+              <span>Enquire About This Package</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5: Weekend Brunch -->
+        <div class="pkg-card" data-cat="dining">
+          <div class="pkg-image-wrap">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80&fit=crop" alt="Weekend Brunch"/>
+            <div class="pkg-image-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <span class="pkg-category">Fine Dining</span>
+            <h2 class="pkg-name">Weekend <em>Brunch</em></h2>
+            <p class="pkg-desc">
+              A leisurely weekend affair with bottomless mimosas,
+              a live cooking station, and our beloved Sunday menu.
+            </p>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-includes">
+              <li>Free-flow Mimosas (90 mins)</li>
+              <li>Live Egg &amp; Charcuterie Station</li>
+              <li>Full Brunch Menu Access</li>
+              <li>Live Jazz Background Music</li>
+            </ul>
+            <div class="pkg-pricing">
+              <div class="pkg-price-wrap">
+                <span class="pkg-price-label">Starting from</span>
+                <div class="pkg-price"><sup>Rp</sup>195<span class="pkg-price-per">/ person</span></div>
+              </div>
+              <div class="pkg-guests">
+                <span>2 – 20</span>
+                Guests
+              </div>
+            </div>
+            <button class="pkg-btn" onclick="openModal('Weekend Brunch','Rp 195','dining')">
+              <span>Reserve This Package</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6: Grand Anniversary -->
+        <div class="pkg-card" data-cat="celebration">
+          <div class="pkg-image-wrap">
+            <img src="https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=800&q=80&fit=crop" alt="Anniversary"/>
+            <div class="pkg-image-overlay"></div>
+          </div>
+          <div class="pkg-body">
+            <span class="pkg-category">Celebration</span>
+            <h2 class="pkg-name">Grand <em>Anniversary</em></h2>
+            <p class="pkg-desc">
+              Mark life's finest milestones with a bespoke celebration package
+              curated to your story, your taste, your moment.
+            </p>
+            <div class="pkg-divider"></div>
+            <ul class="pkg-includes">
+              <li>5-Course Celebration Menu</li>
+              <li>Custom Anniversary Cake</li>
+              <li>Sparkling Wine on Arrival</li>
+              <li>Complimentary Photography (30 min)</li>
+            </ul>
+            <div class="pkg-pricing">
+              <div class="pkg-price-wrap">
+                <span class="pkg-price-label">Starting from</span>
+                <div class="pkg-price"><sup>Rp</sup>750<span class="pkg-price-per">/ couple</span></div>
+              </div>
+              <div class="pkg-guests">
+                <span>2 – 10</span>
+                Guests
+              </div>
+            </div>
+            <button class="pkg-btn" onclick="openModal('Grand Anniversary','Rp 750','celebration')">
+              <span>Reserve This Package</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /packages-grid -->
+    </section>
+
+    <!-- ── CTA BAND ────────────────────────────────── -->
+    <section class="cta-band">
+      <p class="cta-quote">"Every meal at Saveur is a journey — one we would take again and again."</p>
+      <p class="cta-attr">— The Palembang Post, Fine Dining Review 2026</p>
+      
+
+    <!-- ── FOOTER ─────────────────────────────────── -->
+    <footer>
+      <span class="footer-logo">Saveur</span>
+      <p class="footer-copy">© 2026 Saveur Fine Dining. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </footer>
+
+  </div><!-- /page -->
+
+  <!-- ══ BOOKING MODAL ══════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <span class="modal-eyebrow">Reserve Your Experience</span>
+      <h2 class="modal-title" id="modalTitle">Package <em>Name</em></h2>
+      <p class="modal-price-tag" id="modalPrice"><sup>Rp</sup> —</p>
+
+      <div class="modal-row">
+        <div class="modal-field">
+          <label class="modal-label">First Name</label>
+          <input class="modal-input" type="text" placeholder="Your First Name"/>
+        </div>
+        <div class="modal-field">
+          <label class="modal-label">Last Name</label>
+          <input class="modal-input" type="text" placeholder="Your Last Name"/>
+        </div>
+      </div>
+
+      <div class="modal-field">
+        <label class="modal-label">Email Address</label>
+        <input class="modal-input" type="email" placeholder="your@email.com"/>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-field">
+          <label class="modal-label">Preferred Date</label>
+          <input class="modal-input" type="date"/>
+        </div>
+        <div class="modal-field">
+          <label class="modal-label">Number of Guests</label>
+          <select class="modal-select">
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>6 Guests</option>
+            <option>8 Guests</option>
+            <option>10+ Guests</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="modal-field">
+        <label class="modal-label">Special Requests (Optional)</label>
+        <input class="modal-input" type="text" placeholder="Dietary needs, occasion, preferences…"/>
+      </div>
+
+      <button class="modal-submit" onclick="submitBooking()">
+        <span>Confirm Reservation</span>
+        <span>→</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ JAVASCRIPT ════════════════════════════════ -->
+  <script src="packages.js"></script>
+
+</body>
+</html>
